@@ -15,6 +15,11 @@ Once an order is submitted, the items will be automatically removed from the cur
 
 
 
+### LOGO 
+<img src="screenshots/icon.jpg" width="300">
+
+
+
 
 ## Features
 ```
@@ -40,9 +45,6 @@ Certainly! Here's the expanded list with the additional features included:
 ![Screenshots](screenshots/2.png)  
 
 
-
-### LOGO 
-<img src="screenshots/icon.jpg" width="300">
 
 
 
