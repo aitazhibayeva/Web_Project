@@ -12,3 +12,5 @@ Once an order is submitted, the items will be automatically removed from the cur
 * View incoming orders through the admin interface and mark them as completed upon fulfillment.
 * Modify or update product categories and names as necessary to ensure accurate representation on the menu.
 
+### First page  .
+![Screenshots](screenshots/1.png)
