@@ -40,7 +40,7 @@ Certainly! Here's the expanded list with the additional features included:
 
 
 ### LOGO 
-![Screenshots](screenshots/icon.jpg)
+<img src="screenshots/icon.jpg" width="300">
 
 
 ## Tools:
