@@ -16,7 +16,7 @@ Once an order is submitted, the items will be automatically removed from the cur
 
 
 ### LOGO 
-<img src="screenshots/icon.jpg" width="300">
+<img src="screenshots/icon.jpg" width="200">
 
 
 
