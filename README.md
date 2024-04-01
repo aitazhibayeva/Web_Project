@@ -14,6 +14,8 @@ Once an order is submitted, the items will be automatically removed from the cur
 * Modify or update product categories and names as necessary to ensure accurate representation on the menu.
 
 
+
+
 ## Features
 ```
 Certainly! Here's the expanded list with the additional features included:
@@ -43,8 +45,12 @@ Certainly! Here's the expanded list with the additional features included:
 <img src="screenshots/icon.jpg" width="300">
 
 
+
 ## Tools:
 ```
 1.Angular
 2.Django
 ```
+
+
+### "Experience the Vibrancy: Join Us at the AUYL Restaurant!"
