@@ -41,8 +41,8 @@ Certainly! Here's the expanded list with the additional features included:
 
 
 ### Home page  .
-![Screenshots](screenshots/1.png)
-![Screenshots](screenshots/2.png)  
+![Screenshots](screenshots/1.png) 
+![Screenshots](screenshots/2.png) 
 ![Screenshots](screenshots/3.png) 
 ![Screenshots](screenshots/4.png) 
 ![Screenshots](screenshots/5.png) 
