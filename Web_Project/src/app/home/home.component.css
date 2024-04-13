@@ -1,0 +1,239 @@
+.home{
+    background: url(../../assets/home/photo1674557728-4.jpeg) no-repeat 50%/cover;
+    box-shadow: inset 0 0px 80px 100px rgba(0,0,0,0.7); 
+    min-height: 100vh;
+    position: relative;
+}
+
+.home__header{
+    display: flex;
+    width: 100%;
+    padding-top: 40px;
+    text-align: center;
+    flex-direction: column;
+    align-items: end;
+
+}
+
+.home__header-time{
+    font-family: 'baron';
+    color: #FCF6DB;
+    font-size: 24px;
+}
+
+.home__header-people{
+    color: #FFFFFF;
+    font-size: 28px;
+    font-family: 'baron';
+}
+
+.home__name{
+    display: flex;
+    align-items: end;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 80px;
+}
+
+.home__title{
+    font-family: 'Forum';
+    color: #FFFFFF;
+    font-size: 106px;
+    font-weight: 400;
+}
+
+.home__name p{
+    color: #FCF6DB;
+    font-weight: 500;
+    font-family: 'texGyre';
+    font-size: 22.5px;
+}
+
+.about{
+    background: url(../../assets/home/about-bg.webp) no-repeat 50%/cover;
+    box-shadow: inset 0 0px 80px 100px rgba(0,0,0,0.7); 
+    padding: 300px 0;
+}
+
+.content{
+    display: block;
+    margin: 0 auto; 
+    text-align: center;
+    color: #fff;
+}
+
+.about .title{
+    font-family: 'baron';
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.content p{
+    font-size: 20px;
+}
+
+.temp{
+    display: none;
+}
+
+.header{
+    padding: 20px 16px;
+    background: #191513;
+
+}
+
+.header.sticky{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.header.sticky ~ .temp{
+    height: 72px;
+    display: block;
+    background: #191513;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 28px;
+}
+
+.button{
+    background-color: #FCF6DB;
+    display: flex;
+    align-items: center;
+    padding: 16px 70px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: #52423B;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    justify-content: center;
+    font-family: "Rubik Mono One", monospace;
+    transition: all .3s ease-in;
+}
+
+.button:hover{
+    background-color: #C2BDA9;
+}
+
+.food{
+    background: #191513;
+    padding: 100px 0;
+    position: relative;
+}
+
+.carousel__el{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 16px
+}
+
+.carousel__el.main{
+    width: 500px;
+    height: 500px;
+}
+
+.carousel__el img{
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+}
+
+.carousel{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    left: -150px;
+}
+
+.food__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.food__descr{
+    color: #fff;
+    position: relative;
+    left: -100px;
+}
+
+.food__descr .title{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.carousel-2{
+    left: -80px;
+}
+
+.carousel-2 .carousel__el{
+    width: 220px;
+    height: 300px;
+}
+
+.carousel-2 .carousel__el.main{
+    width: 430px;
+    height: 430px;
+}
+
+.place{
+    min-height: 840px;
+    position: relative;
+    background: url(../../assets/home/place-bg.jpg) no-repeat 50%/cover;
+}
+
+.place .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #191513;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+footer .button{
+    margin: 150px 0;
+}
+
+.footar__wrap{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+}
+
+.phone {
+    text-align: center;
+}
+
+.phone .title{
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.phone p{
+    font-size: 24px;
+    font-family: 'baron';
+}
+
