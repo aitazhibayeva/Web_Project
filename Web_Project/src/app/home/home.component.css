@@ -237,3 +237,16 @@ footer .button{
     font-family: 'baron';
 }
 
+.logo{
+    width: 200px;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.home__logo{
+    position: absolute;
+    bottom: 50px;
+    right: 60px;
+}
