@@ -43,8 +43,6 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'users',
-    'post',
-    'comment',
 
 ]
 
