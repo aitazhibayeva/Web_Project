@@ -24,13 +24,7 @@ export class AuthService {
   }
 
 
-  setLoggedInUser(userData: LoggedInUser) {
-    if(localStorage.length){
-      if (localStorage.getItem('userData') !== JSON.stringify(userData)) {
-        localStorage.setItem('userData', JSON.stringify(userData));
-      }
-    }
-  }
+  
 
   registerUser(user:any) {
     

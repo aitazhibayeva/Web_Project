@@ -1,0 +1,17 @@
+.guests-container { 
+    display: flex; 
+    align-items: center; 
+  } 
+   
+  .guests-container button { 
+    background-color: transparent; 
+    border: none; 
+  } 
+   
+  .guests-container button:hover { 
+    background-color: #CCC; 
+  } 
+   
+  .guests-container span { 
+    margin: 0 10px; 
+  }

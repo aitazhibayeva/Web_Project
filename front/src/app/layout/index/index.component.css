@@ -250,3 +250,12 @@ footer .button{
     bottom: 50px;
     right: 60px;
 }
+
+.logout{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}

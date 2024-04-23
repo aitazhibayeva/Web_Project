@@ -1,0 +1,61 @@
+<button mat-icon-button style="float: right;" matDialogClose> 
+    <mat-icon>close</mat-icon> 
+  </button> 
+   
+  <mat-dialog-content *ngIf="!showDateGuestPicker"> 
+    <header> 
+      <h1>Auyl meiramhanasynda üstel bröndau</h1> 
+    </header> 
+   
+    <p> 
+      <mat-form-field> 
+        <input matInput placeholder="Имя"> 
+        <mat-icon matSuffix>person</mat-icon> 
+      </mat-form-field> 
+    </p> 
+   
+    <p> 
+      <mat-form-field> 
+        <input matInput placeholder="Номер телефона"> 
+        <mat-icon matSuffix>phone</mat-icon> 
+      </mat-form-field> 
+    </p> 
+  </mat-dialog-content> 
+   
+  <mat-dialog-actions *ngIf="!showDateGuestPicker"> 
+    <button mat-raised-button (click)="showDateGuestPicker = true"> Продолжить</button> 
+  </mat-dialog-actions> 
+   
+  <div *ngIf="showDateGuestPicker"> 
+ 
+     
+    <mat-form-field>  
+      <input matInput [matDatepicker]="picker" placeholder="Выберите дату"> 
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle> 
+      <mat-datepicker #picker></mat-datepicker> 
+    </mat-form-field> 
+   
+    <h2 >Выберите количество гостей</h2> 
+    <div class="guests-container"> 
+      <button mat-icon-button (click)="decreaseGuests()"> 
+        <mat-icon>remove</mat-icon> 
+      </button> 
+      <span>{{ guests }}</span> 
+      <button mat-icon-button (click)="increaseGuests()"> 
+        <mat-icon>add</mat-icon> 
+      </button> 
+    </div> 
+     
+    <!-- <ngx-material-timepicker [format]="24" placeholder="Выберите время">Выберите время</ngx-material-timepicker> --> 
+ 
+       
+       
+       
+      <mat-form-field> 
+    <textarea matInput placeholder="Пожелания"></textarea> 
+  </mat-form-field> 
+    <mat-dialog-actions> 
+      <button mat-raised-button> Отправить</button> 
+    </mat-dialog-actions> 
+  </div>
+

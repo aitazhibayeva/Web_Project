@@ -1,8 +1,7 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
-import {Post} from '../../models/Post';
-import {User} from '../../models/User';
-import {UserService} from '../../service/user.service';
-import {ImageUploadService} from '../../service/image-upload.service';
+import { TokenStorageService } from '../../service/token-storage.service';
+import { MatDialog } from '@angular/material/dialog';
+import { BrondauComponent } from '../../brondau/brondau.component';
 
 @Component({
   selector: 'app-index',
@@ -11,10 +10,15 @@ import {ImageUploadService} from '../../service/image-upload.service';
 })
 export class IndexComponent implements OnInit {
 
+  isAuth!: boolean;
+
   constructor(
+    private tokenStorage: TokenStorageService,
+    private matDialog: MatDialog // Добавлен MatDialog в конструктор
   ) { }
 
   ngOnInit(): void {
+    this.isAuth = !!this.tokenStorage.getUserId();
   }
 
   @ViewChild('myHeader')
@@ -35,4 +39,13 @@ export class IndexComponent implements OnInit {
     }
   }
 
+  logout(){
+    this.tokenStorage.logOut();
+  }
+
+  openDialog(){ 
+    this.matDialog.open(BrondauComponent, { 
+      width: '800px', 
+    }) 
+  }
 }

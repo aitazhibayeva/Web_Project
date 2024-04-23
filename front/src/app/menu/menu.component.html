@@ -1,0 +1,18 @@
+<div class="menu">   
+     <h1>Меню</h1>
+    <div class="box">        
+        <div class="cont" *ngFor="let category of categories">
+            <a [routerLink]="['/categories', category.id, 'products']">                
+                <div class="category">
+                    <div class="category-img">                        
+                        <img [src]="category.img" alt="img">
+                    </div>                   
+                     <button class="category-name" (click)="Show(category.name)">
+                        {{category.name}}                    
+                    </button>
+                </div>            
+            </a>
+        </div>    
+    </div>
+</div>
+<app-category-products [category]="currCat"></app-category-products>

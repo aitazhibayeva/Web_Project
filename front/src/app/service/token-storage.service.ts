@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import { LoggedInUser } from '../models/Auth';
 
 const TOKEN_KEY = 'auth-token';
 const USER_KEY = 'userData';
@@ -12,16 +13,21 @@ export class TokenStorageService {
   }
 
   public saveToken(token: string): void {
-    window.sessionStorage.removeItem(TOKEN_KEY);
-    window.sessionStorage.setItem(TOKEN_KEY, token);
+    if(typeof window !== 'undefined' && window.localStorage){
+      window.localStorage.removeItem(TOKEN_KEY);
+    }
+    window.localStorage.setItem(TOKEN_KEY, token);
   }
 
   public getToken() {
-    return sessionStorage.getItem(TOKEN_KEY);
+    if(typeof window !== 'undefined' && window.localStorage){
+      return localStorage.getItem(TOKEN_KEY);
+    }
+    return undefined;
   }
 
   public saveUser(user:any): void {
-    if(localStorage.length){
+    if(typeof window !== 'undefined' && window.localStorage){
       localStorage.removeItem(USER_KEY);
 
     }
@@ -29,21 +35,27 @@ export class TokenStorageService {
   }
 
   public getUserId() {
-    // Проверяем, существует ли объект window и localStorage в этом объекте
-    if (typeof window !== 'undefined' && window.localStorage.length) {
+    if (typeof window !== 'undefined' && window.localStorage) {
       const userDataString = localStorage.getItem('userData');
       if (userDataString) {
         const userData = JSON.parse(userDataString);
         return userData.id;
       }
     }
-    // Возвращаем undefined или другое подходящее значение, если localStorage не доступен
     return undefined;
+  }
+
+  setLoggedInUser(userData: LoggedInUser) {
+    if(localStorage.length){
+      if (localStorage.getItem('userData') !== JSON.stringify(userData)) {
+        localStorage.setItem('userData', JSON.stringify(userData));
+      }
+    }
   }
 
 
   logOut(): void {
-    window.sessionStorage.clear();
+    window.localStorage.clear();
     window.location.reload();
   }
 }

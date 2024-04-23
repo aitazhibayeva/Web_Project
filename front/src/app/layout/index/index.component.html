@@ -1,4 +1,7 @@
 <div class="home">
+    <div *ngIf="isAuth" class="logout" (click)="logout()">
+        <i class="fa-solid fa-right-from-bracket"></i>
+    </div>
     <div class="container">
         <div class="home__header">
             <div class="home__header-wrap">
@@ -22,9 +25,11 @@
 
 <div #myHeader class="header">
     <a href="/register" class="button">REGISTER</a>
-    <a href="#" class="button">MÁ’ZIR</a>
+    <a href="/menu" class="button">MÁ’ZIR</a>
     <a href="#" class="button">ShOLÝLAR</a>
-    <a href="#" class="button">BRONDAÝ</a>
+    <mat-dialog-actions> 
+        <button mat-button  class="button" (click)="openDialog()">BRONDAÝ</button> 
+    </mat-dialog-actions>
 </div>
 
 <div class="temp"></div>
