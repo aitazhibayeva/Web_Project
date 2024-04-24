@@ -9,9 +9,9 @@ import {ProductService} from "../service/products.service";
   styleUrls: ['./category-products.component.css']
 })
 export class CategoryProductsComponent implements OnInit{
-  category_id!:string;
+  category_id!:number;
   @Input() category: string | undefined
-  products: Product[] = products;
+  products!: Product[];
   categories: Category[] = categories;
   deleteFunc(productid:number){
     this.products=this.products.filter(p=>p.id!==productid);
@@ -20,7 +20,7 @@ export class CategoryProductsComponent implements OnInit{
               private productService: ProductService) {
   }
   ngOnInit():void {
-    this.category_id = this.route.snapshot.params['id'];
+    this.category_id = Number(this.route.snapshot.params['id']);
     this.productService.getCategoryProducts(this.category_id).subscribe((data)=>{
       this.products = data;
     });

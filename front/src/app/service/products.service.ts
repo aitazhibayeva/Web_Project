@@ -6,9 +6,9 @@ import {Product} from "../models/Product";
     providedIn: 'root'
 })
 export class ProductService {
-    BASE_URL = 'http://127.0.0.1:8000/'
+    BASE_URL = 'http://127.0.0.1:8000/api'
     constructor(private client: HttpClient) { }
-    getCategoryProducts(category_id:string): Observable<Product[]>{
+    getCategoryProducts(category_id:number): Observable<Product[]>{
         return this.client.get<Product[]>(
             `${this.BASE_URL}/categories/${category_id}/products/`
         );

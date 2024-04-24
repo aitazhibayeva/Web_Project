@@ -6,7 +6,8 @@ import {CategoryService} from "../service/category.service";
   selector: 'app-menu',  
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'})
-export class MenuComponent {  categories = categories;
+export class MenuComponent {  
+  categories!: Category[];
   currCat : string | undefined;
   Show(category: string) {    
     this.currCat = category;
